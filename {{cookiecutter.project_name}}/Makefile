@@ -1,4 +1,4 @@
-TEX_SOURCE := {{cookiecutter.project_name}}.tex
+TEX_SOURCE := {{cookiecutter.project_name}}
 
 BUILDPARAM = -cd -f -pdf -interaction=nonstopmode -synctex=1
 WATCHPARAM = -pvc -f -pdf -interaction=nonstopmode -synctex=1
@@ -6,11 +6,11 @@ TEMP_FILES = *.aux *.fdb_latexmk *.fls *.log *.out *.synctex.gz
 
 .PHONY: build
 build:
-	latexmk $(BUILDPARAM) $(TEX_SOURCE)
+	latexmk $(BUILDPARAM) $(TEX_SOURCE).tex
 
 .PHONY: watch
 watch:
-	latexmk $(WATCHPARAM) $(TEX_SOURCE)
+	latexmk $(WATCHPARAM) $(TEX_SOURCE).tex
 
 .PHONY: clean
 clean:

@@ -1,6 +1,6 @@
 @ECHO OFF
 
-set TEX_SOURCE="{{cookiecutter.project_name}}.tex"
+set TEX_SOURCE="{{cookiecutter.project_name}}"
 
 set TEMP_FILES=("*.aux", "*.fdb_latexmk", "*.fls", "*.log", "*.out", "*.synctex.gz")
 
@@ -29,12 +29,12 @@ echo.
 goto exit
 
 :build
-latexmk -cd -f -pdf -interaction=nonstopmode -synctex=1 %TEX_SOURCE%
+latexmk -cd -f -pdf -interaction=nonstopmode -synctex=1 %TEX_SOURCE%.tex
 
 goto exit
 
 :watch
-latexmk -pvc -f -pdf -interaction=nonstopmode -synctex=1 %TEX_SOURCE%
+latexmk -pvc -f -pdf -interaction=nonstopmode -synctex=1 %TEX_SOURCE%.tex
 
 goto exit
 
