@@ -1,4 +1,5 @@
 {
     "project_name": "dmarticle",
-    "language": "ru"
+    "language": "ru",
+    "create_gitignore": "yes"
 }

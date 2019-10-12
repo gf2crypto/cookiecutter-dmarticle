@@ -32,7 +32,18 @@ def customize_tex_files(language='ru'):
     os.remove(OPTION_FILE)
 
 
+def make_gitignore(condition):
+    """Create or delete gitignore file."""
+    gitignore = os.path.join(WORKING_DIR, 'gitignore')
+    dot_gitignore = os.path.join(WORKING_DIR, '.gitignore')
+    if condition.startswith('yes'):
+        os.rename(gitignore, dot_gitignore)
+    else:
+        os.remove(gitignore)
+
+
 if __name__ == "__main__":
     with open(OPTION_FILE) as file:
         options = json.load(file)
     customize_tex_files(options['language'])
+    make_gitignore(options['create_gitignore'])

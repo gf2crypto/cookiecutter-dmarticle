@@ -1,3 +1,4 @@
 {
-    "language": "{{cookiecutter.language}}"
+    "language": "{{cookiecutter.language}}",
+    "create_gitignore": "{{cookiecutter.create_gitignore}}"
 }
