@@ -1,6 +1,6 @@
 # cookiecutter-dmarticle
 
-The repository contains `cookiecutter` template for LaTeX article for Discrete Mathematics Journal.
+The repository contains `cookiecutter` ([more details](https://cookiecutter.readthedocs.io/en/latest/)) template for LaTeX article for Discrete Mathematics Journal.
 
 Template supports two languages: Russian (ru) and English (en).
 
